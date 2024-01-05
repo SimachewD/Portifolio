@@ -334,6 +334,9 @@ img {
 .skills__ux {
   width: 70%;
 }
+.skills__node {
+  width: 50%;
+}
 .skills__bs5 {
   width: 70%;
 }

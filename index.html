@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css">
+
+<style>
+ a {
+    text-decoration: none !important;
+ }  
+ a:hover{
+    color: aqua !important;
+ }
+.name {
+  color: #fff !important;
+}
+
+ #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #4f5e8a;
+  overflow-y: auto;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header.profile h1 a,
+#header.profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header.profile.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #92949a;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header.profile.social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*===== NAV =====*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-4);
+}
+
+.nav__link {
+  position: relative;
+  color: #fff;
+}
+
+.nav__link:hover {
+  position: relative;
+}
+
+.nav__link:hover::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+.nav__logo {
+  color: var(--second-color);
+}
+
+.nav__toggle {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*Active menu*/
+.active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+
+</style>
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+
+
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+    <div class="row">
+      <div class="col">
+        <header id="header">
+                <div class="profile mb-5">
+                    <image class="rounded-circle" src="img/profile.jpg"/>
+                    <h1><a href="#" class="name">Simachew Denekew</a></h1>
+                    <div class="home__social mt-3 ms-5 ps-5">
+                        <a href="https://www.linkedin.com/in/simachew-denekew-0073231a1/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/Simachew-10" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    </div>
+                </div>
+
+                <nav class="nav bd-grid">
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="">
+                            <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                            <li class="nav__item"><a href="#work" class="nav__link">Educational Details</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </nav>
+        </header>
+      </div>  
+    <div class="col-10">
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Simachew Denekew</span></h1> <h3><b>SOFTWARE ENGINEER</b></h3><h4> Graduated from Bahir dar Technology Institute (July 2023)</h4>
+                </div>
+
+                
+
+                
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="img/profile.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <p class="about__text">I am a  Software Engineering student at Bahir dar Institute of Technology, Bahir dar Ethiopia, and as a software engineering student I have a career goal to be a <u> stack developer</u>. This will allow me to work in varity of industries including business and education.</p> 
+                        <p class="about__text">I have the basic knowldge in various programming languages and I have an ambition and motivation to succeed in this field and the competence to carry out my goals</p>
+                        <ul>
+                            <li><b>Name :</b> Simachew Denekew</li>
+                            <li><b>Address :</b> Bahir dar, Ethiopia</li>
+                            <li><b>Date of Birth :</b> October 5, 1999</li>
+                            <li><b>Place of Birth :</b> Feres bet</li>
+                            <li><b>Age :</b> 23</li>
+                            <li><b>Career of choice :</b> Web Development( Full stack)</li>
+                        </ul>
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Here are some of my proffessional skills, abilities and value.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='skills__icon'><img style="width: 32px; height: 32px;" src="img/bs5.jpg" alt=""></i>
+                                <span class="skills__name">Bootstrap5</span>
+                            </div>
+                            <div class="skills__bar skills__bs5">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">60%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='skills__icon'><img src="img/php-logo.gif" alt=""></i>
+                                <span class="skills__name">PHP</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="img/work33.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Educational Details</h2>
+
+                <div class="work__container bd-grid mb-5">
+                    
+                    <div class="card" style="width: 350px;">
+                        <div class="card-header"><h4>Primary School Details</h4></div>
+                        <div class="card-body"><strong>School Name:</strong> Feres bet Primary School<br><strong>Duration:</strong> 2007-2014</div>
+                        <div class="card-footer"><strong>Primary School Leaving Exam :</strong> 72</div>
+                      </div>
+                      <div class="card" style="width: 350px;">
+                        <div class="card-header"><h4>High School Details</h4></div>
+                        <div class="card-body"><strong>School Name:</strong> Feres bet Preparatory School<br><strong>Duration:</strong> 2014-2018</div>
+                        <div class="card-footer"><strong>Grade 10:</strong> 3.57<br><strong>Grade 12:</strong> 519</div>
+                      </div>
+                      <div class="card" style="width: 350px;">
+                        <div class="card-header"><h4>Higher Education Details</h4></div>
+                        <div class="card-body"><strong>School Name:</strong>Bahir dar Technology Institute<br><strong>Duration:</strong> 2018-2023</div>
+                        <div class="card-footer"><strong>Current CGPA :</strong> 3.63</div>
+                      </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Simachew</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/simachew.denekew.5/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/Simachew_dw/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://t.me/Simachew_d" class="footer__icon"><i class='bx bxl-telegram' ></i></a>
+                <p><Strong>Call Us: </Strong>+251936323536</p>
+            </div>
+            <p class="footer__copy">&#169; 2023. All rigths reserved</p>
+        </footer>
+     </div>
+
+    </div>    
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="main.js"></script>
+    </body>
+</html>
